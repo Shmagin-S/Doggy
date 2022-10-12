@@ -1,0 +1,21 @@
+apply from: "${project.rootDir.parentFile}versions.gradle"
+
+ext {
+    platform = [
+            androidX: [
+
+            ],
+            kotlin: [
+
+            ],
+            rx: [
+
+            ],
+            dagger: [
+
+            ],
+            network: [
+
+            ]
+    ]
+}

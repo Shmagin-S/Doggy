@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+void includeSubproject(String moduleName, String modulePath) {
+    include ":$moduleName"
+    project(":$moduleName").projectDir = new File(modulePath)
+}
+
+
+rootProject.name = "Doggy"
+include ':Doggy'
+includeSubproject('NetworkCoreLibApi', 'core/network/NetworkCoreLibApi')
